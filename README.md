@@ -7,3 +7,5 @@
 This is a project to finish SYSU program design homework.
 
 This project was published under [MPL 2.0](./LICENSE).
+
+[//]: # (gcc -o caculator main.c calculate.c preCalculate.c screenPrinting.c change.c)

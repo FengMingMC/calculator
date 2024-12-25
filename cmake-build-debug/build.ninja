@@ -49,29 +49,40 @@ cmake_ninja_workdir = /cygdrive/d/Learning/calculator/cmake-build-debug/
 
 build cmake_object_order_depends_target_calculator: phony || .
 
-build CMakeFiles/calculator.dir/main.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/main.c || cmake_object_order_depends_target_calculator
-  DEP_FILE = CMakeFiles/calculator.dir/main.c.o.d
+build CMakeFiles/calculator.dir/cfiles/main.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/cfiles/main.c || cmake_object_order_depends_target_calculator
+  DEP_FILE = CMakeFiles/calculator.dir/cfiles/main.c.o.d
   FLAGS = -g -std=gnu2x -fdiagnostics-color=always
+  INCLUDES = -I/
   OBJECT_DIR = CMakeFiles/calculator.dir
-  OBJECT_FILE_DIR = CMakeFiles/calculator.dir
+  OBJECT_FILE_DIR = CMakeFiles/calculator.dir/cfiles
 
-build CMakeFiles/calculator.dir/calculate.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/calculate.c || cmake_object_order_depends_target_calculator
-  DEP_FILE = CMakeFiles/calculator.dir/calculate.c.o.d
+build CMakeFiles/calculator.dir/cfiles/calculate.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/cfiles/calculate.c || cmake_object_order_depends_target_calculator
+  DEP_FILE = CMakeFiles/calculator.dir/cfiles/calculate.c.o.d
   FLAGS = -g -std=gnu2x -fdiagnostics-color=always
+  INCLUDES = -I/
   OBJECT_DIR = CMakeFiles/calculator.dir
-  OBJECT_FILE_DIR = CMakeFiles/calculator.dir
+  OBJECT_FILE_DIR = CMakeFiles/calculator.dir/cfiles
 
-build CMakeFiles/calculator.dir/preCalculate.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/preCalculate.c || cmake_object_order_depends_target_calculator
-  DEP_FILE = CMakeFiles/calculator.dir/preCalculate.c.o.d
+build CMakeFiles/calculator.dir/cfiles/preCalculate.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/cfiles/preCalculate.c || cmake_object_order_depends_target_calculator
+  DEP_FILE = CMakeFiles/calculator.dir/cfiles/preCalculate.c.o.d
   FLAGS = -g -std=gnu2x -fdiagnostics-color=always
+  INCLUDES = -I/
   OBJECT_DIR = CMakeFiles/calculator.dir
-  OBJECT_FILE_DIR = CMakeFiles/calculator.dir
+  OBJECT_FILE_DIR = CMakeFiles/calculator.dir/cfiles
 
-build CMakeFiles/calculator.dir/screenPrinting.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/screenPrinting.c || cmake_object_order_depends_target_calculator
-  DEP_FILE = CMakeFiles/calculator.dir/screenPrinting.c.o.d
+build CMakeFiles/calculator.dir/cfiles/screenPrinting.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/cfiles/screenPrinting.c || cmake_object_order_depends_target_calculator
+  DEP_FILE = CMakeFiles/calculator.dir/cfiles/screenPrinting.c.o.d
   FLAGS = -g -std=gnu2x -fdiagnostics-color=always
+  INCLUDES = -I/
   OBJECT_DIR = CMakeFiles/calculator.dir
-  OBJECT_FILE_DIR = CMakeFiles/calculator.dir
+  OBJECT_FILE_DIR = CMakeFiles/calculator.dir/cfiles
+
+build CMakeFiles/calculator.dir/cfiles/change.c.o: C_COMPILER__calculator_unscanned_Debug /cygdrive/d/Learning/calculator/cfiles/change.c || cmake_object_order_depends_target_calculator
+  DEP_FILE = CMakeFiles/calculator.dir/cfiles/change.c.o.d
+  FLAGS = -g -std=gnu2x -fdiagnostics-color=always
+  INCLUDES = -I/
+  OBJECT_DIR = CMakeFiles/calculator.dir
+  OBJECT_FILE_DIR = CMakeFiles/calculator.dir/cfiles
 
 
 # =============================================================================
@@ -81,9 +92,9 @@ build CMakeFiles/calculator.dir/screenPrinting.c.o: C_COMPILER__calculator_unsca
 #############################################
 # Link the executable calculator.exe
 
-build calculator.exe: C_EXECUTABLE_LINKER__calculator_Debug CMakeFiles/calculator.dir/main.c.o CMakeFiles/calculator.dir/calculate.c.o CMakeFiles/calculator.dir/preCalculate.c.o CMakeFiles/calculator.dir/screenPrinting.c.o
+build calculator.exe: C_EXECUTABLE_LINKER__calculator_Debug CMakeFiles/calculator.dir/cfiles/main.c.o CMakeFiles/calculator.dir/cfiles/calculate.c.o CMakeFiles/calculator.dir/cfiles/preCalculate.c.o CMakeFiles/calculator.dir/cfiles/screenPrinting.c.o CMakeFiles/calculator.dir/cfiles/change.c.o
   FLAGS = -g
-  LINK_FLAGS = -Wl,--enable-auto-import
+  LINK_FLAGS = -static
   OBJECT_DIR = CMakeFiles/calculator.dir
   POST_BUILD = :
   PRE_LINK = :

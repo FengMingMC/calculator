@@ -13,7 +13,10 @@ bool preCalculate(const char* input) {
                 || input[i] == '-'
                 || input[i] == '*'
                 || input[i] == '/'
-                || input[i] == '.') {
+                || input[i] == '.'
+                || input[i] == '^'
+                || input[i] == 'e'
+                || input[i] == 'p') {
                 }else {
                     printf("于第%d处发现错误，请检查\n", i+1);
                     return false;
@@ -29,7 +32,10 @@ bool preCalculate(const char* input) {
                     || input[i+1] == '-'
                     || input[i+1] == '*'
                     || input[i+1] == '/'
-                    || input[i+1] == '.') {
+                    || input[i+1] == '.'
+                    || input[i+1] == '^'
+                    || input[i+1] == 'e'
+                    || input[i+1] == 'p') {
                     printf("于第%d处发现错误，请检查\n", i+2);
                     return false;
                     }

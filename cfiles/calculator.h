@@ -8,5 +8,6 @@ bool preCalculate(char* input);
 bool preCalculate_(char* input);
 void getCommand();
 void printScreen();
+void change();
 
 #endif //CALCULATOR_H

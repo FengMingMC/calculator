@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include "calculator.h"
+#include <ctype.h>
 
 
 
@@ -10,6 +11,7 @@ const char help[101] = "help";
 const char about[101] = "about";
 const char history[101] = "history";
 char input[101];
+const char c[101] = "change";
 const char quit[101] = "quit";
 char historyFormula[20][101];
 double historyOutput[20];
@@ -20,6 +22,7 @@ void printScreen()//输出主屏幕
     printf("********************\n");
     printf("*  输入式子以开始计算  *\n");
     printf("********************\n");
+    printf("change 单位换算\n");
     printf("help 获取帮助\n");
     printf("about 关于开发\n");
     printf("history 历史计算数据\n");
@@ -28,12 +31,14 @@ void printScreen()//输出主屏幕
 }
 
 
+
 void getCommand() {
     void printHelp();
     void printAbout();
     void printHistory();
     void getInput();
     void roll();
+
     getInput();
     if (strcmp(input, help) == 0) {
         printHelp();
@@ -48,7 +53,10 @@ void getCommand() {
         printf("感谢使用。");
         exit(1);
     }
-    else {
+    else if (strcmp(input, c) == 0)
+    {
+        change();
+    }else {
         if(preCalculate(input)) {
             double result = calculate(input);
             printf("%s=%lf\n",input,result);
@@ -64,7 +72,7 @@ void printHelp() {
     printf("帮助\n");
     printf("基本功能：输入式子直接计算\n");
     printf("示例：2*3+4*6\n");
-    printf("圆周率请使用pi,自然对数请使用e\n");
+    printf("圆周率请使用p,自然常数数请使用e\n");
 }
 
 void printAbout() {
@@ -101,3 +109,4 @@ void roll() {
         historyOutput[i+1] = historyOutput[i];
     }
 }
+
