@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
@@ -19,9 +19,9 @@ double historyOutput[20];
 
 void printScreen()//输出主屏幕
 {
-    printf("********************\n");
-    printf("*  输入式子以开始计算  *\n");
-    printf("********************\n");
+    printf("**************************\n");
+    printf("*   输入式子以开始计算   *\n");
+    printf("**************************\n");
     printf("change 单位换算\n");
     printf("help 获取帮助\n");
     printf("about 关于开发\n");
@@ -50,7 +50,7 @@ void getCommand() {
         printHistory();
     }
     else if (strcmp(input, quit) == 0) {
-        printf("感谢使用。");
+        printf("谢谢使用");
         exit(1);
     }
     else if (strcmp(input, c) == 0)
@@ -77,12 +77,12 @@ void printHelp() {
 
 void printAbout() {
     printf("关于\n");
-    printf("双鸭山大学程序设计大作业————计算器\n");
+    printf("双鸭山大学程序设计大作业????计算器\n");
     printf("开发名单；\n");
     printf("cjl xmh\n");
     printf("fyh hzl\n");
     printf("gqh dsw\n");
-    printf("版权所有 © 2024 [fengming]\n本软件由 中山大学 程序设计大作业 计算器小组 开发\n并遵守 Mozilla Public License 2.0 (MPL 2.0) 的条款发布。您可以自由使用、修改和分发本软件，但必须遵守许可证的规定。\n关于MPL 2.0 的详细信息，请参阅https://www.mozilla.org/en-US/MPL/2.0/\n");
+    printf("版权所有 ? 2024 [fengming]\n本软件由 中山大学 程序设计大作业 计算器小组 开发\n并遵守 Mozilla Public License 2.0 (MPL 2.0) 的条款发布。您可以自由使用、修改和分发本软件，但必须遵守许可证的规定。\n关于MPL 2.0 的详细信息，请参阅https://www.mozilla.org/en-US/MPL/2.0/\n");
     printf("Github仓库地址:https://github.com/fengmingmc/calculator\n");
 }
 

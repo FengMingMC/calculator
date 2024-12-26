@@ -1,8 +1,8 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdbool.h>
 
 bool preCalculate(const char* input) {
-        if ((input[0] >= '0' && input[0] <= '9')|| input[0] == '-') {
+    if ((input[0] >= '0' && input[0] <= '9')|| input[0] == '-'|| input[0] == 'e'|| input[0] == 'p') {
         } else {
             printf("于第%d处发现错误，请检查\n", 1);
             return false;
@@ -33,9 +33,7 @@ bool preCalculate(const char* input) {
                     || input[i+1] == '*'
                     || input[i+1] == '/'
                     || input[i+1] == '.'
-                    || input[i+1] == '^'
-                    || input[i+1] == 'e'
-                    || input[i+1] == 'p') {
+                    || input[i+1] == '^') {
                     printf("于第%d处发现错误，请检查\n", i+2);
                     return false;
                     }

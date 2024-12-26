@@ -1,9 +1,9 @@
-#include <math.h>
+﻿#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#define naturalConst 2.718
+#define NC 2.718
 #define Pi 3.14159
 
 double calculate(const char* input) {
@@ -14,7 +14,20 @@ double calculate(const char* input) {
     memset(operation, 0, sizeof(operation));
     for (int i = 0; input[i] != '\0'; i++) {
         char charNumber[101];
-        while ((input[i] >= '0' && input[i] <= '9')|| input[i] == '-') {
+        while ((input[i] >= '0' && input[i] <= '9')
+                || input[i] == '-'
+                || input[i] == 'e'
+                || input[i] == 'p') {
+            if(input[i] == 'e') {
+                number[nIndex] = NC;
+                i++;
+                goto numberEnd;
+            }
+            if(input[i] == 'p') {
+                number[nIndex] = Pi;
+                i++;
+                goto numberEnd;
+            }
             int jIndex = 0;
             charNumber[jIndex] = input[i];
             jIndex++;
@@ -27,6 +40,7 @@ double calculate(const char* input) {
             charNumber[jIndex] = '\0';
             char *endptr;
             number[nIndex] = strtod(charNumber,&endptr);
+            numberEnd:
             nIndex++;
         }
     }
@@ -70,9 +84,9 @@ double calculate(const char* input) {
     }
 
 
-    for (int i = 0; number[i] != '\0'; i++) {
-        printf("%lf\n", number[i]);
-    }
+    //for (int i = 0; number[i] != '\0'; i++) {
+    //    printf("%lf\n", number[i]);
+    //}
     double sum = 0;
     for (int i = 0; i<101; i++) {
         sum = sum + number[i];

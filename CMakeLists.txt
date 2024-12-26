@@ -13,7 +13,4 @@ add_executable(calculator
         cfiles/screenPrinting.c
         cfiles/change.c
 
-        cfiles/calculator.h
-
-
-)
+        cfiles/calculator.h)
